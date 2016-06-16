@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="../script/angular.min.js"></script>
+<script type="text/javascript" src="../script/application.js"></script>
+<script type="text/javascript" src="../script/controller.js"></script>
+</head>
+<body  ng-app="myApp" ng-controller="myController">
+<div  style="width: 300px; border: 1px solid black; padding: 10px 10px 10px 10px;">
+<form action="../ProductServlet" method="get" >
+<table>
+<tr>
+
+<td>Product name</td>
+<td><input type="text" name="pname" size="20"></td>
+</tr>
+<tr>
+<td>category</td>
+<td><select name="category">
+<option ng-repeat="category in categories" value= {{category.category_Id }}>{{category.category_name}}</option>
+
+
+
+
+
+</select></td></select>
+
+</tr>
+<tr>
+<td>quality</td>
+<td><input type="text" name="quantity" size="20"></td>
+</tr>
+<tr>
+<td>Price</td>
+<td><input type="text" name="price" size="20"></td>
+</tr>
+<tr><td></td>
+<td><input type="submit" value="save"></td></tr>
+
+</table>
+
+
+</form>
+
+</div>
+
+
+</body>
+</html>
